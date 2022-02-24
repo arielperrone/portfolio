@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+        <title>Ariel Perrone - Portfolio</title>
+        <meta name="description" content="Portfolio de Ariel Perrone, mi camino a la programación. Un poco de mi historia. Mis  conocimientos actuales: mi camino por recorrer en el mundo   informatico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com"     crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa& display=swap" rel="stylesheet"> 
+        <style>
+            .body {
+                background-color: black;
+                font-family: 'Comfortaa'; letter-spacing: 2px;
+                color: white;
+                width: 90%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;   
+            }
+            .container {
+                width:  780px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+            }            
+            
+            .imagen img {
+                width: 400px;
+                height: auto;
+                background-color:black ;
+            }
+
+            .texto {
+                height: fit-content;
+                display: flex;
+                align-items: baseline;
+                gap: 3px;
+            }
+
+            .nombre {
+                text-align: right;
+            }
+
+            .separador {
+                text-align: center;
+                width: 5px;
+                height: auto;
+                background-color: cornsilk;
+            }
+
+            .portword {
+                text-decoration: none;
+                font-weight: bolder;
+                color: white;    
+                font-weight: bolder ;
+                transition: font-size 2s ease;
+            }
+
+            .portword:hover {
+               font-size: x-large;
+               text-shadow: 1px 1px 1px  cornsilk;
+               text-shadow: -1px -1px 1px cornsilk;
+            }
+            .footer {
+                display: flex;
+                background-color: #1d1b1b;
+                justify-content: space-evenly;
+                gap: 10px;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body class="body">
+        <div class="container">
+            <div class="imagen ">
+                <img src="unnamed.jpg" alt="Foto de Ariel">
+            </div>
+            <div class="texto">
+                <div class="nombre">ARIEL PERRONE</div>
+                <div class="separador">|</div>
+                <dvi class="portword">
+                        <a href="/portfolio_01/portfolio_01.html"   class="portword" title="version 0.1">PORTFOLIO</  a></dvi>
+            </div>
+            <footer class="footer">
+                <div>
+                    <a href="#"><img src="/portfolio_01/github-icon.png"    width="50px" height="50px alt="linkToGitHun" ></a>
+                </div>
+                <div>
+                    <a href="#"><img src="/portfolio_01/codepen-icon.png"   width="50px" height="50px" alt="linkToCodepen"></a>
+                </div>
+            </footer>
+        </div>    
+        
+    </body>
+</html>

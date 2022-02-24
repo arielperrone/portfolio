@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis codigos 1</title>
+</head>
+<body>
+    <table width="100%">
+        <tr>
+            <td width="50%">
+                <blockquote>
+                    Scrpt de pseudo-codigo hecho en pseint como parte de un examen de la facultad de programación. Aunque sea algo sencillo el pseudo-codigo nos ayuda a pensar el codigo de manera mas fácil.
+                </blockquote>
+                <code>
+
+                    <pre>
+                    Algoritmo Programa_de_encuesta_de_gaseosas
+                        // Definir todas las variables	
+                        Definir numEncuestado Como Entero;
+                        Definir seXo Como Entero;
+                        Definir hombre Como Entero;
+                        Definir mujer Como Entero;
+                        Definir edad Como Entero;
+                        Definir totalDietetica Como Entero;
+                        Definir totalComun Como Entero;
+                        Definir mujeresColaComun Como Entero;
+                        Definir mujeresNaranjaComun Como Entero;
+                        Definir mujeresColaDiet Como Entero;
+                        Definir mujeresNaranjaDiet Como Entero;
+                        Definir hombresColaComun Como Entero;
+                        Definir hombresColaDiet Como Entero;
+                        Definir hombresNaranjaComun Como Entero;
+                        Definir hombresNaranjaDiet Como Entero;
+                        Definir terminarBucle Como Caracter;
+                        Definir opcionUno Como Entero;
+                        Definir opcionDos Como Entero;
+                    
+                        // Asignar varlores a las variables
+                        numEncuestado = 0;
+                    seXo = 0;
+                    hombre = 0;
+                    mujer = 0;
+                    edad = [0];
+                    totalDietetica = 0;
+                    totalComun = 0;
+                    mujeresColaComun = 0;
+                    mujeresNaranjaComun = 0;
+                    mujeresColaDiet = 0;
+                    mujeresNaranjaDiet = 0;
+                    hombresColaComun = 0;
+                    hombresNaranjaComun = 0;
+                    hombresColaDiet = 0;
+                    hombresNaranjaDiet = 0;
+                    terminarBucle = "N";
+                    
+                    Mientras terminarBucle == "N" o terminarBucle == "n" Hacer
+                    // Toma de datos del usuario
+                        Escribir "Diganos si es hombre o mujer";
+                        Repetir
+                            Escribir "Elija 1 para hombre y 2 para mujer";
+                            Leer seXo;
+                            Hasta Que seXo == 1 O seXo == 2 
+                                
+                            Segun seXo Hacer
+                            1:
+                            hombre = hombre + 1;
+                            2:
+                            mujer = mujer + 1;
+                        FinSegun
+                        
+                        Escribir "Diganos su edad";
+                        Leer edad;
+                        
+                        Escribir "Que tipo de gaseosa le gusta";
+                        Repetir
+                        Escribir "Coloque 1 para las de Cola y 2 para las de Naranja";
+                        Leer opcionUno;
+                        Hasta Que opcionUno == 1 O opcionUno == 2;
+                        
+                        Escribir "Ahora diganos si le gusta Comun o Dietetica";
+                        Repetir
+                            Escribir "coloque 1 para Comun y 2 para Diet";
+                            Leer opcionDos;
+                        Hasta Que  opcionDos == 1 O opcionDos == 2
+                                
+                        Si seXo == 1 Entonces
+                        Si opcionUno == 1 Entonces
+                        Si opcionDos == 1 Entonces
+                                    hombresColaComun = hombresColaComun + 1;
+                                    totalComun = totalComun + 1;
+                                    SiNo
+                                    hombresColaDiet = hombresColaDiet + 1;
+                                    totalDietetica = totalDietetica + 1;
+                                FinSi
+                                SiNo
+                                Si opcionDos == 1 Entonces
+                                hombresNaranjaComun = hombresNaranjaComun + 1;
+                                totalComun = totalComun + 1;
+                                SiNo
+                                hombresNaranjaDiet = hombresNaranjaDiet + 1;
+                                totalDietetica = totalDietetica + 1;
+                                FinSi
+                            FinSi
+                            SiNo
+                            Si opcionUno == 1 Entonces
+                            Si opcionDos == 1 Entonces
+                            mujeresColaComun = mujeresColaComun + 1;
+                            totalComun = totalComun + 1;
+                            SiNo
+                                    mujeresColaDiet = mujeresColaDiet + 1;
+                                    totalDietetica = totalDietetica + 1;
+                                FinSi
+                            SiNo
+                                Si opcionDos == 1 Entonces
+                                mujeresNaranjaComun = mujeresNaranjaComun + 1;
+                                    totalComun = totalComun + 1;
+                                    SiNo
+                                    mujeresNaranjaDiet = mujeresNaranjaDiet + 1;
+                                    totalDietetica = totalDietetica + 1;
+                                    FinSi
+                            FinSi
+                            Fin Si
+                        numEncuestado = numEncuestado + 1;
+                        Escribir "Desea ver los resultados?. S/N";
+                        Leer terminarBucle;
+                        Fin Mientras
+                    Escribir "Resultados:";
+                    Escribir "total de encuestados: ", numEncuestado;
+                    Si totalComun <> 0 Entonces
+                    Escribir "total de consumo de bebidas Comunes: ", totalComun;
+                    FinSi
+                    Si totalDietetica <> 0 Entonces
+                        Escribir "total de consumo de bebidas Dieteticas: ", totalDietetica;
+                    FinSi
+                    Si hombre <> 0 Entonces
+                    Si hombre == 1 Entonces
+                    Escribir "solo ha participado un hombre";
+                    SiNo
+                    Escribir "han participado ", hombre, " hombres";
+                    FinSi
+                    FinSi
+                    Si mujer <> 0 Entonces
+                    Si mujer == 1 Entonces
+                            Escribir "solo ha participado una mujer";
+                            SiNo
+                            Escribir "han participado ", mujer, " mujeres";
+                        FinSi
+                        FinSi
+                        Si hombre <> 0 Entonces
+                        Si hombresColaComun <> 0 Entonces
+                        Si hombresColaComun == 1 Entonces
+                        Escribir hombresColaComun, " toma gaseosa de cola comun";
+                            SiNo
+                            Escribir hombresColaComun, " toman gaseosa de cola comun";
+                            FinSi
+                        FinSi
+                        Si hombresColaDiet <> 0 Entonces
+                        Si hombresColaDiet == 1 Entonces
+                        Escribir hombresColaDiet, " toma gaseosa de cola diet";
+                        SiNo
+                        Escribir hombresColaDiet " toman Gaseosa de Cola Diet";
+                        FinSi
+                        FinSi
+                        Si hombresNaranjaComun <> 0 Entonces
+                        Si hombresNaranjaComun == 1 Entonces
+                                Escribir hombresNaranjaComun, " toma gaseosa de naranja comun";
+                                SiNo
+                                Escribir hombresNaranjaComun, " toman gaseosa de naranja comun";
+                                FinSi
+                        FinSi
+                        Si hombresNaranjaDiet <> 0 Entonces
+                            Si hombresNaranjaDiet == 1 Entonces
+                                Escribir hombresNaranjaDiet, " toma gaseosa de naranja diet";
+                            SiNo
+                            Escribir hombresNaranjaDiet " toman Gaseosa de naranja Diet";
+                            FinSi
+                        FinSi
+                        FinSi
+                        Si mujer <> 0 Entonces
+                        Si mujeresColaComun <> 0 Entonces
+                            Si mujeresColaComun == 1 Entonces
+                            Escribir mujeresColaComun, " toma gaseosa de cola comun";
+                            SiNo
+                            Escribir mujeresColaComun, " toman gaseosa de cola comun";
+                            FinSi
+                            FinSi
+                            Si mujeresColaDiet <> 0 Entonces
+                            Si mujeresColaDiet == 1 Entonces
+                            Escribir mujeresColaDiet, " toma gaseosa de cola diet";
+                            SiNo
+                            Escribir mujeresColaDiet " toman Gaseosa de cola Diet";
+                            FinSi
+                            FinSi
+                            Si mujeresNaranjaComun <> 0 Entonces
+                            Si mujeresNaranjaComun == 1 Entonces
+                            Escribir mujeresNaranjaComun, " toma gaseosa de naranja comun";
+                            SiNo
+                                Escribir mujeresNaranjaComun, " toman gaseosa de naranja comun";
+                                FinSi
+                                FinSi
+                                Si mujeresNaranjaDiet <> 0 Entonces
+                                Si mujeresNaranjaDiet == 1 Entonces
+                                Escribir mujeresNaranjaDiet, " toma gaseosa de naranja diet";
+                            SiNo
+                            Escribir mujeresNaranjaDiet " toman Gaseosa de naranja Diet";
+                            FinSi
+                            FinSi
+                            FinSi
+                            Si totalComun <> 0 Entonces
+                            Escribir "total de gaseosas comunes: ", totalComun;
+                    FinSi
+                    Si totalDietetica <> 0 Entonces
+                    Escribir "total de gaseosas diet: ", totalDietetica;
+                    FinSi
+                    Escribir "Gracias por usar nuestro programa!!!";
+                    FinAlgoritmo
+                    </pre>
+                </code>
+            </td>
+            <td width="50%">
+                <blockquote>
+                    He aqui su correspondiente hecho en python.
+                </blockquote>
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
