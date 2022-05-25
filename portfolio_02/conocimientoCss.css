@@ -1,0 +1,64 @@
+
+/* parametros de la cabecera */
+header {
+    width: 99%;
+    display: flex;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 5px black;
+    flex-flow: row;
+    align-items: center;
+    align-content: stretch;
+    
+    
+}
+
+header span {
+    font-size: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    width:auto;
+}
+
+.circulos:first-child {
+    width: 4em;
+    height: 4em;
+}
+
+.circulos {
+    height: 3em;
+    width: 3em;
+    border-radius: 50%;
+}
+
+main {
+    width: 99%;    
+}
+
+.videos { 
+    height: 300px;
+    border: 1px solid red;
+    box-shadow: 10px 10px 5px black;
+    margin-bottom: 40px;
+}
+
+.cursos {
+    height: 300px;
+    border: 1px solid blue;
+    box-shadow: 10px 10px 5px black;
+    margin-bottom: 40px;
+}
+
+.libros {
+    height: 400px;
+    border: 1px solid green;
+    box-shadow: 10px 10px 5px black;
+    margin-bottom: 40px;
+}
+.efec {
+    transition: font-size 2s ease;
+}
+
+.efec:hover {
+    box-shadow: 8px 8px 14px black;
+}
