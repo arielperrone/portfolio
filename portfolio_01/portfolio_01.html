@@ -46,36 +46,87 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td width="30%">
+                    <td width="30%" id="izquierdo">
                         <ul> 
-                            <li><p onclick="location.assign(articulos/articulo02.html);">Babeando la revista</p></li>
-                            <li><p onclick="location.assign(acticulos/articulo02.html);location.href='#central'">256 clores</p></li>
-                            <li><p onclick="location.href='#tercero'" target="central">Compartiendo el Civilizacion II</p></li>
-                            <li><p onclick="location.href='#cuarto'" target="central">La enseñansa de Leo</p></li>
-                            <li><p onclick="location.href='#quinto'" target="central">los jueguitos de mi infancia</p></li>
-                            <li><p onclick="location.href='#sexto'" target="central">Papá quiero mi compu</p></li>
-                            <li><p onclick="location.href='#septimo'" target="central">Cybergirlfriend.html</p></li>
-                            <li><p onclick="location.href='#octavo'" target="central">Escondiendome de mi mujer</p></li>
-                            <li><p onclick="location.href='#noveno'" target="central">Todo el tiempo perdido</p></li>
-                            <li><p onclick="location.href='#sdecimo'" target="central">2022</p></li>
+                            <li><p class="number" value="1">Babeando la revista</p></li>
+                            <li><p class="number" value="2">256 clores</p></li>
+                            <li><p class="number" value="3">Compartiendo el Civilizacion II</p></li>
+                            <li><p class="number" value="4">La enseñansa de Leo</p></li>
+                            <li><p class="number" value="5">los jueguitos de mi infancia</p></li>
+                            <li><p class="number" value="6">Papá quiero mi compu</p></li>
+                            <li><p class="number" value="7">Cybergirlfriend.html</p></li>
+                            <li><p class="number" value="8">Escondiendome de mi mujer</p></li>
+                            <li><p class="number" value="9">Todo el tiempo perdido</p></li>
+                            <li><p class="number" value="10">2022</p></li>
                         </ul>
                     </td>
-                    <td width="30%">
+                    <td width="30%" id="central">
                         <iframe src="/portfolio_01/articulos/articulo01.html" frameborder="0" name="central" width="100%" height="600px"></iframe>
                        
                        
                     </td>
-                    <td width="30%">
-                        <iframe src="/portfolio_01/scrips.html" width="100%" height="600px" frameborder="0"></iframe>
+                    <td width="30%" id="derecho">
+                        <iframe id="frame" src="/portfolio_01/scrips.html" width="100%" height="600px" frameborder="0"></iframe>
 
                     </td>
                 </tr>
             </tbody>
             </table>
         </section>
-        <footer>
+        <footer bgcolor="black" heigth="50px">
+            <p>Esta pagina de mi Portfolio ha sido hecha solo con html y Javascript sin la intervención de CSS, emulando los periodicos (diarios como les llamamos en mi país) de antes que se imprimian solo en tinta blaco y negro</p>
             
         </footer>
     </main>
+    <script>
+        var myRequest = "../articulos/articulo01.html";
+        var frame = document.getElementsByClassName("number");
+        var shotter = frame.addEventListener(click, frameResult().then(frameChanger))
+
+        switch(frame.value)
+        {
+            case 1:
+                myRequest = "../articulos/articulo01.html";
+                break;
+            case 2:
+                myRequest = "../articulos/articulo02.html";
+                break;
+            case 3:
+                myRequest = "../articulos/articulo03.html";
+                break;
+            case 4:
+                myRequest = "../articulos/articulo04.html";
+                break;
+            case 5:
+                myRequest = "../articulos/articulo05.html";
+                break;
+            case 6:
+                myRequest = "../articulos/articulo06.html";
+                break;
+            case 7:
+                myRequest = "../articulos/articulo07.html";
+                 break;
+            case 8:
+                myRequest = "../articulos/articulo08.html";
+                break;
+            case 9:
+                myRequest = "../articulos/articulo9.html";
+                 break;
+            case 10:
+                myRequest = "../articulos/articulo10.html";
+                break;
+        }
+        
+        async function frameResult()
+        {
+            var respuesta = await fetch(myRequest);
+        }
+         
+        function frameChanger(article)
+        {
+            document.getElementById("central").innerHTML = article;
+        }
+        
+    </script>
 </body>
 </html>
